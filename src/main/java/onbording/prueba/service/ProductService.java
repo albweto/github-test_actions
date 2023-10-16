@@ -2,6 +2,7 @@ package onbording.prueba.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.transaction.Transactional;
+import jakarta.ws.rs.WebApplicationException;
 import onbording.prueba.dto.ProductDto;
 import onbording.prueba.entity.Product;
 
@@ -34,7 +35,7 @@ public class ProductService {
 
         Optional<Product> optionalProduct = Product.findByIdOptional(id);
         if(optionalProduct.isEmpty()){
-            throw  new NullPointerException("Producto no encontrado");
+            throw  new WebApplicationException("Producto no encontrado", 404);
         }
 
         product = optionalProduct.get();
@@ -51,7 +52,7 @@ public class ProductService {
     public void removeProduct(long id){
         Optional<Product> optionalProduct = Product.findByIdOptional(id);
         if(optionalProduct.isEmpty()){
-            throw  new NullPointerException("Producto no encontrado");
+            throw  new WebApplicationException("Producto no encontrado",404);
         }
 
         Product product = optionalProduct.get();
