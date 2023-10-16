@@ -1,12 +1,9 @@
 package onbording.prueba;
 
 import io.quarkus.test.junit.QuarkusTest;
-import jakarta.ws.rs.core.HttpHeaders;
-import jakarta.ws.rs.core.MediaType;
 import org.junit.jupiter.api.*;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.port;
 import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
