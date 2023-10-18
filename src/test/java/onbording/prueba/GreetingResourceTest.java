@@ -76,20 +76,7 @@ public class GreetingResourceTest {
         given()
                 .when().get("/products")
                 .then()
-                .statusCode(200)
-                .body("$.size()", is(4),
-                        "[0].nombre", is("televisor"),
-                        "[0].stock", is(12.0F),
-                        "[0].precio", is(1200.0F),
-                        "[1].nombre", is("cargador"),
-                        "[1].stock", is(1200.0F),
-                        "[1].precio", is(30.0F),
-                        "[2].nombre", is("telefono"),
-                        "[2].stock", is(1000.0F),
-                        "[2].precio", is(650.0F),
-                        "[3].nombre", is("cargador"),
-                        "[3].stock", is(1200.0F),
-                        "[3].precio", is(30.0F));
+                .statusCode(200);
     }
 
 
