@@ -1,5 +1,6 @@
 package onbording.prueba.controller;
 
+import io.agroal.api.AgroalDataSource;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -8,7 +9,7 @@ import onbording.prueba.dto.ProductDto;
 import onbording.prueba.entity.Product;
 import onbording.prueba.service.ProductService;
 
-import java.awt.*;
+
 import java.util.List;
 
 @Path("products")
